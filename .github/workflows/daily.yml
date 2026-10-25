@@ -1,0 +1,27 @@
+name: 每日制度之门
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - run: python gate/runner.py && cat regime.json
+      - run: |
+          git config user.name "RegimeGate Bot"
+          git config user.email "bot@regime-gate.io"
+          git add regime.json
+          git diff --staged --quiet || git commit -m "daily: update regime.json $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: regime.json
+          path: regime.json

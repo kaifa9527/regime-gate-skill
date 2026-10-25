@@ -1,3 +1,3 @@
 import pathlib, tempfile, os
-def atomic_write(target, content):
-    target=pathlib.Path(target); fd,tmp=tempfile.mkstemp(dir=target.parent); os.fdopen(fd,'w').write(content); os.replace(tmp,target)
+def atomic_write(p,c):
+ p=pathlib.Path(p); f=tempfile.NamedTemporaryFile(mode='w',delete=False,dir=str(p.parent)); f.write(c); f.close(); os.replace(f.name,p)

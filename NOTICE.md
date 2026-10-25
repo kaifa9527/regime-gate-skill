@@ -1,0 +1,1 @@
+Attribution: TradingAgents Apache-2.0, CCXT MIT, freqtrade GPLv3

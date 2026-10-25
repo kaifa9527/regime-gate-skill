@@ -1,0 +1,53 @@
+{
+  "max_open_trades": 3,
+  "stake_currency": "USDT",
+  "stake_amount": 100,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "USD",
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "cancel_open_orders_on_exit": false,
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "exchange": {
+    "name": "binance",
+    "pair_whitelist": [
+      "BTC/USDT"
+    ],
+    "pair_blacklist": []
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "freqai": {
+    "enabled": true,
+    "purge_old_models": 7,
+    "train_period_days": 30,
+    "backtest_period_days": 7,
+    "identifier": "regime_gate",
+    "feature_parameters": {
+      "include_timeframes": [
+        "1h",
+        "4h"
+      ],
+      "include_corr_pairlist": [
+        "BTC/USDT"
+      ],
+      "label_period_candles": 24,
+      "include_shifted_candles": 2
+    },
+    "data_kitchen_thread_count": 4
+  },
+  "bot_name": "regime_gate",
+  "initial_state": "running",
+  "db_url": "sqlite:///tradesv3.sqlite",
+  "timeframe": "1h"
+}

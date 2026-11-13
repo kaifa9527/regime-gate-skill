@@ -4,16 +4,16 @@
   "allowed": "both",
   "close_mode": "SOFT_CLOSE",
   "ttl_hours": 26,
-  "price": 73475.4,
+  "price": 68232.34,
   "components": {
     "onchain": {
-      "mvrv": 1.117,
-      "mvrv_z": 0.389,
-      "nupl": 0.105,
+      "mvrv": 1.038,
+      "mvrv_z": 0.126,
+      "nupl": 0.037,
       "bias": "sideways",
       "regime": "sideways",
       "score": 0,
-      "price": 73475.4
+      "price": 68232.34
     },
     "derivatives": {
       "funding_rate": 0.0,

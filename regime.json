@@ -1,19 +1,19 @@
 {
-  "regime": "sideways",
-  "bias": "sideways",
-  "allowed": "both",
+  "regime": "bear",
+  "bias": "bear",
+  "allowed": "short_only",
   "close_mode": "SOFT_CLOSE",
   "ttl_hours": 26,
-  "price": 67045.57,
+  "price": 64536.0,
   "components": {
     "onchain": {
-      "mvrv": 1.021,
-      "mvrv_z": 0.068,
-      "nupl": 0.02,
-      "bias": "sideways",
-      "regime": "sideways",
-      "score": 0,
-      "price": 67045.57
+      "mvrv": 0.983,
+      "mvrv_z": -0.056,
+      "nupl": -0.017,
+      "bias": "bear",
+      "regime": "bear",
+      "score": -1,
+      "price": 64536.0
     },
     "derivatives": {
       "funding_rate": 0.0,
